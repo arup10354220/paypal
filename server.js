@@ -33,8 +33,9 @@ app.get('/buy' , ( req , res ) => {
 		"payment_method": "paypal"
 	},
 	"redirect_urls": {
-		"return_url": "http://127.0.0.1:3000/success",
-		"cancel_url": "http://127.0.0.1:3000/err"
+		"return_url": "https://paypal-dbs.herokuapp.com/success",
+
+		"cancel_url": "https://paypal-dbs.herokuapp.com/err"
 	},
 	"transactions": [{
 		"amount": {
@@ -84,7 +85,7 @@ app.get('/err' , (req , res) => {
 //})
 
 app.listen(process.env.PORT || 3000);
-console.log(' app listening on 3000 '); 
+//console.log(' app listening on 3000 '); 
 
 
 // helper functions 
